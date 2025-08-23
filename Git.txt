@@ -9,14 +9,17 @@ Here in this system, every engineer can have their own copy of code from main/re
 
 Let's explore commands:
 -----------------------
-git init : It will instantiate git, like installing CC camera in project :P., and if you creating in your local, in real time, we clone existing repos
+git init    : It will instantiate git, like installing CC camera in project :P., and if you creating in your local, in real time, we clone existing repos
 
 git clone <repo url>
 
 Ex: git clone https://github.com/mani-tech-labs/shell-scripting-projects.git
 
-git status : It will be useful to check the status of current working directory like any files are modified, are files need to be added to stage, or yet to be commited etc. It will help you with commands as well.
+git status  : It will be useful to check the status of current working directory like any files are modified, are files need to be added to stage, or yet to be commited etc. It will help you with commands as well.
 
+git log     : It will display all commits done by all users 
+
+git log --patch : For logging more details with respect to commit like changes done in files etc.
 
 
 
