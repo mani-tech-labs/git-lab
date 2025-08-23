@@ -17,9 +17,23 @@ Ex: git clone https://github.com/mani-tech-labs/shell-scripting-projects.git
 
 git status  : It will be useful to check the status of current working directory like any files are modified, are files need to be added to stage, or yet to be commited etc. It will help you with commands as well.
 
-git log     : It will display all commits done by all users 
+git log     : It will display all commits done by all users.
 
-git log --patch : For logging more details with respect to commit like changes done in files etc.
+git log --patch or git log -p : For logging more details with respect to commit like changes done in files etc.
+
+git add     : To add modified file to stage area.
+
+git add .   : To add all modified files to stage area.
+
+git restore --staged <filename> : To come back to modified state.
+
+git restore --staged .  : To come back to modified state applies for all staged file.
+
+git restore <filename>  : To discard modifications done file.
+
+git commit -m "msg"     : This will commit changes to local repo
+
+git remote -v           : 
 
 
 
