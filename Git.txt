@@ -1,0 +1,24 @@
+Centralized version control system:
+-----------------------------------
+This is a legacy version control system where version control happens on Centralized servers. As its a Centralized, engineers have dependencies o   n central server for their commits and updates. Though its easy to maintain a single server, there is a risk of single point for failure, if engineers are unable to connect to the server 
+then their work got stuck. To overcome this limitations, Linus Torvalds, the creator of Linux officially introduced git on April 7th 2005.
+
+Distributed version connect system/git:
+---------------------------------------
+Here in this system, every engineer can have their own copy of code from main/remote server, they can make changes in their local copies once they are confident they can push the changes to remote server, main branch. Once they push code to remote origin their commits will be stored in remote server, engineers can control which commits they can share (to avoids foolish commits :P). similarly other developer can also do that and finally working code/product code will be kept in remote origin/main branch, approval system can be place to avoid commits mistakes and protect main branch. If dev1 and dev2 do the changes in same line, conflict arise which need a manual intervention to resolve the same. before pushing every developer local code needs updated code from remote origin.
+
+Let's explore commands:
+-----------------------
+git init : It will instantiate git, like installing CC camera in project :P., and if you creating in your local, in real time, we clone existing repos
+
+git clone <repo url>
+
+Ex: git clone https://github.com/mani-tech-labs/shell-scripting-projects.git
+
+
+
+
+
+
+
+
