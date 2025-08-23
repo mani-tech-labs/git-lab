@@ -33,7 +33,11 @@ git restore <filename>  : To discard modifications done file.
 
 git commit -m "msg"     : This will commit changes to local repo
 
-git remote -v           : 
+git remote -v           : Lists all repository connected with local repo, URL show where the repo is hosted GitHub/Gitlab
+
+git push origin main    : Pushed the local repo changes to origin main, I mean remote repo :) 
+
+
 
 
 
