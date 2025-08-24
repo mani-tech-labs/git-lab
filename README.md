@@ -1,4 +1,4 @@
-# Git Lab
+# Git and GitHub
 
 A comprehensive collection of Git learning resources, interview questions, real-world challenges, and beginner-friendly solutions.
 
