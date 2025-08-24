@@ -1,3 +1,5 @@
+SSH Authentication
+--------------------
 First time connecting, SSH asks to trust GitHub’s fingerprint → verify it matches GitHub’s official one, then accept.
 
 Your computer stores GitHub’s fingerprint so it won’t ask again.
