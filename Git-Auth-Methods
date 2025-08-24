@@ -1,0 +1,25 @@
+First time connecting, SSH asks to trust GitHub’s fingerprint → verify it matches GitHub’s official one, then accept.
+
+Your computer stores GitHub’s fingerprint so it won’t ask again.
+
+You need an SSH key pair (private key stays on your machine, public key goes to GitHub).
+
+Add your public key to GitHub in Settings → SSH and GPG keys so GitHub can recognize you.
+
+Once set up, you can test the connection to confirm GitHub trusts your key.
+
+After both sides trust each other, you can clone, push, and pull without entering passwords.
+
+Along with commands:
+--------------------
+Verify GitHub fingerprint → type yes if it matches official.
+
+Generate key: ssh-keygen -t ed25519 -C "your_email@example.com".
+
+Copy public key: cat ~/.ssh/id_ed25519.pub.
+
+Add key in GitHub → Settings → SSH and GPG Keys.
+
+Test connection: ssh -T git@github.com.
+
+Clone repo: git clone git@github.com:user/repo.git.
