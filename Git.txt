@@ -1,43 +1,54 @@
 Centralized version control system:
------------------------------------
-This is a legacy version control system where version control happens on Centralized servers. As its a Centralized, engineers have dependencies o   n central server for their commits and updates. Though its easy to maintain a single server, there is a risk of single point for failure, if engineers are unable to connect to the server 
-then their work got stuck. To overcome this limitations, Linus Torvalds, the creator of Linux officially introduced git on April 7th 2005.
+This is a legacy version control system where version control happens on centralized servers. As it's centralized, engineers have dependencies on the central server for their commits and updates. Though it's easy to maintain a single server, there is a risk of a single point of failure. If engineers are unable to connect to the server, their work gets stuck. To overcome these limitations, Linus Torvalds, the creator of Linux, officially introduced Git on April 7th, 2005.
 
-Distributed version connect system/git:
+Distributed version control system/Git:
 ---------------------------------------
-Here in this system, every engineer can have their own copy of code from main/remote server, they can make changes in their local copies once they are confident they can push the changes to remote server, main branch. Once they push code to remote origin their commits will be stored in remote server, engineers can control which commits they can share (to avoids foolish commits :P). similarly other developer can also do that and finally working code/product code will be kept in remote origin/main branch, approval system can be place to avoid commits mistakes and protect main branch. If dev1 and dev2 do the changes in same line, conflict arise which need a manual intervention to resolve the same. before pushing every developer local code needs updated code from remote origin.
+In this system, every engineer can have their own copy of code from the main/remote server. They can make changes in their local copies, and once confident, push the changes to the remote server/main branch. Once they push code to the remote origin, their commits will be stored in the remote server. Engineers can control which commits they share (to avoid foolish commits :P). Similarly, other developers can do the same, and finally, the working/product code will be kept in the remote origin/main branch. An approval system can be in place to avoid commit mistakes and protect the main branch. If dev1 and dev2 make changes in the same line, a conflict arises which needs manual intervention to resolve. Before pushing, every developer's local code needs updated code from the remote origin.
 
 Let's explore commands:
------------------------
-git init    : It will instantiate git, like installing CC camera in project :P., and if you creating in your local, in real time, we clone existing repos
+git init    : It will initialize Git, like installing a CCTV camera in the project :P. If you are creating in your local, in real time, we clone existing repos.
 
 git clone <repo url>
 
 Ex: git clone https://github.com/mani-tech-labs/shell-scripting-projects.git
 
-git status  : It will be useful to check the status of current working directory like any files are modified, are files need to be added to stage, or yet to be commited etc. It will help you with commands as well.
+git status  : It is useful to check the status of the current working directory, like if any files are modified, files need to be added to the stage, or yet to be committed, etc. It will help you with commands as well.
 
-git log     : It will display all commits done by all users, option -p can be used for detailed log, like changes done to file/s
+git log     : It will display all commits done by all users. Option -p can be used for a detailed log, showing changes done to files.
 
-git add     : To add modified file to stage area, same command can used for adding new file.
+git add     : To add a modified file to the staging area. The same command can be used for adding a new file.
 
-git add .   : To add all modified files to stage area.
+git add .   : To add all modified files to the staging area.
 
-git restore --staged <filename> : To come back to modified state.
+git restore --staged <filename> : To revert a staged file back to the modified state.
 
-git restore --staged .  : To come back to modified state applies for all staged file.
+git restore --staged .  : To revert all staged files back to the modified state.
 
-git restore <filename>  : To discard modifications done file.
+git restore <filename>  : To discard modifications done to a file.
 
-git commit -m "msg"     : This will commit changes to local repo
+git commit -m "msg"     : This will commit changes to the local repo.
 
-git remote -v           : Lists all repository connected with local repo, URL show where the repo is hosted GitHub/Gitlab
+git remote -v           : Lists all repositories connected with the local repo. The URL shows where the repo is hosted (GitHub/GitLab).
 
-git push origin main    : Pushed the local repo changes to origin main, I mean remote repo :) 
+git remote remove <remote-name>
 
-git log     : To list all previous commits, option --oneline can be used for to list commits in one line, option --decorate can be used to display commit log with extra information and visiaully annotated.
+Ex: git remote remove origin : The 'origin' remote will be removed.
 
-git branch <branch name>: To create a new branch
+git remote add origin <remote-url>
+
+Ex: git remote add origin https://github.com/mani-tech-labs/git-lab.git
+
+Tip: In VS Code, when you add a new GitHub origin, it allows authentication via browser, as GitHub and VS Code are owned by Microsoft.
+
+git push origin main    : Pushes the local repo changes to origin/main, i.e., the remote repo :)
+
+git log     : To list all previous commits. Option --oneline can be used to list commits in one line. Option --decorate can be used to display the commit log with extra information and visually annotated.
+
+git branch  : To list all branches. A pointer will show you which branch you currently in.
+
+git branch <branch-name> : To create a new branch
+
+
 
 
 
