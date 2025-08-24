@@ -1,2 +1,2 @@
 # git-lab
-Learning git and github
+Git Playground
