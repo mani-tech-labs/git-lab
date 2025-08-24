@@ -3,45 +3,522 @@ Git Interview Questions and Answers
 
 1. What is Git?
 Git is a distributed version control system used to track changes in source code during software development.
+Example:
+• You can use Git to manage your code history and collaborate with others on a project.
 
 2. What is the difference between Git and GitHub?
 Git is a version control tool; GitHub is a web-based hosting service for Git repositories.
+Example:
+• You use Git commands locally, and push your code to GitHub for sharing and collaboration.
 
 3. How do you initialize a new Git repository?
 Use `git init` to create a new repository in your project directory.
+Example:
+• mkdir myproject
+• cd myproject
+• git init
 
 4. How do you clone a repository?
 Use `git clone <repo-url>` to copy a remote repository to your local machine.
+Example:
+• git clone https://github.com/user/repo.git
 
 5. What is a commit?
 A commit is a snapshot of your changes in the repository. Use `git commit -m "message"` to create one.
+Example:
+• git add file.txt
+• git commit -m "Added file.txt"
 
 6. How do you check the status of your repository?
 Use `git status` to see staged, unstaged, and untracked files.
+Example:
+• git status
 
 7. How do you stage files for commit?
 Use `git add <filename>` to stage a file, or `git add .` to stage all changes.
+Example:
+• git add main.py
+• git add .
 
 8. How do you view the commit history?
 Use `git log` to see the commit history.
+Example:
+• git log
 
 9. What is a branch in Git?
 A branch is a separate line of development. Use `git branch <branch-name>` to create one.
+Example:
+• git branch feature-1
 
 10. How do you switch branches?
 Use `git checkout <branch-name>` to switch to another branch.
+Example:
+• git checkout feature-1
 
 11. How do you merge branches?
 Use `git merge <branch-name>` to merge another branch into your current branch.
+Example:
+• git checkout main
+• git merge feature-1
 
 12. How do you resolve merge conflicts?
 Edit the conflicted files manually, then stage and commit the resolved files.
+Example:
+• Open the file with conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`), edit to resolve
+• git add conflicted-file.txt
+• git commit -m "Resolved merge conflict"
 
 13. How do you connect your local repo to a remote?
 Use `git remote add origin <remote-url>`.
+Example:
+• git remote add origin https://github.com/user/repo.git
 
 14. How do you push changes to a remote repository?
 Use `git push origin <branch-name>`.
+Example:
+• git push origin main
 
 15. How do you pull changes from a remote repository?
 Use `git pull origin <branch-name>`.
+Example:
+• git pull origin main
+
+16. What is the difference between `git fetch` and `git pull`?
+`git fetch` downloads changes from the remote but does not merge them; `git pull` downloads and merges changes into your current branch.
+Example:
+• git fetch origin
+• git pull origin main
+
+17. How do you see the differences between two commits?
+Use `git diff <commit1> <commit2>` to view the changes between two commits.
+Example:
+• git diff abc123 def456
+
+18. How do you undo the last commit?
+Use `git reset --soft HEAD~1` to undo the last commit but keep changes staged, or `git reset --hard HEAD~1` to remove changes completely.
+Example:
+• git reset --soft HEAD~1
+• git reset --hard HEAD~1
+
+19. How do you remove a file from the staging area?
+Use `git reset <filename>` to unstage a file.
+Example:
+• git reset file.txt
+
+20. How do you delete a branch locally and remotely?
+Use `git branch -d <branch-name>` to delete locally and `git push origin --delete <branch-name>` to delete remotely.
+Example:
+• git branch -d feature-1
+• git push origin --delete feature-1
+
+21. What is a tag in Git?
+A tag is a reference to a specific commit, often used for marking releases. Use `git tag <tagname>` to create one.
+Example:
+• git tag v1.0.0
+
+22. How do you create an annotated tag?
+Use `git tag -a <tagname> -m "message"` to create an annotated tag.
+Example:
+• git tag -a v1.0.0 -m "Release version 1.0.0"
+
+23. How do you list all tags in a repository?
+Use `git tag` to list all tags.
+Example:
+• git tag
+
+24. How do you delete a tag?
+Use `git tag -d <tagname>` to delete locally and `git push origin --delete <tagname>` to delete remotely.
+Example:
+• git tag -d v1.0.0
+• git push origin --delete v1.0.0
+
+25. What is the HEAD in Git?
+HEAD is a reference to the current commit or branch you are working on.
+Example:
+• git log -1
+
+26. How do you revert a file to a previous commit?
+Use `git checkout <commit-hash> -- <filename>`.
+Example:
+• git checkout abc123 -- file.txt
+
+27. How do you stash changes?
+Use `git stash` to save changes temporarily and `git stash pop` to reapply them.
+Example:
+• git stash
+• git stash pop
+
+28. How do you list all stashes?
+Use `git stash list`.
+Example:
+• git stash list
+
+29. How do you apply a specific stash?
+Use `git stash apply stash@{n}` where n is the stash index.
+Example:
+• git stash apply stash@{0}
+
+30. How do you drop a stash?
+Use `git stash drop stash@{n}`.
+Example:
+• git stash drop stash@{0}
+
+31. How do you see the log of a specific file?
+Use `git log <filename>`.
+Example:
+• git log file.txt
+
+32. How do you see who modified a line in a file?
+Use `git blame <filename>`.
+Example:
+• git blame file.txt
+
+33. How do you ignore files in Git?
+Add file patterns to `.gitignore`.
+Example:
+• echo node_modules/ >> .gitignore
+
+34. How do you undo changes in a file?
+Use `git checkout -- <filename>` or `git restore <filename>`.
+Example:
+• git restore file.txt
+
+35. How do you rename a file in Git?
+Use `git mv <oldname> <newname>`.
+Example:
+• git mv old.txt new.txt
+
+36. How do you see remote URLs?
+Use `git remote -v`.
+Example:
+• git remote -v
+
+37. How do you change the remote URL?
+Use `git remote set-url origin <new-url>`.
+Example:
+• git remote set-url origin https://github.com/user/newrepo.git
+
+38. How do you fetch all branches from a remote?
+Use `git fetch --all`.
+Example:
+• git fetch --all
+
+39. How do you create a new repository on GitHub from the command line?
+Use `gh repo create <repo-name>` (requires GitHub CLI).
+Example:
+• gh repo create my-new-repo
+
+40. How do you fork a repository?
+On GitHub, click the Fork button; locally, clone the forked repo.
+Example:
+• git clone https://github.com/otheruser/repo.git
+
+41. How do you sync your fork with the upstream repository?
+Add upstream remote, fetch, and merge: `git remote add upstream <url>`, `git fetch upstream`, `git merge upstream/main`.
+Example:
+• git remote add upstream https://github.com/original/repo.git
+• git fetch upstream
+• git merge upstream/main
+
+42. How do you resolve a detached HEAD state?
+Create a new branch: `git checkout -b <branch-name>`.
+Example:
+• git checkout -b fix-detached-head
+
+43. How do you see the status of submodules?
+Use `git submodule status`.
+Example:
+• git submodule status
+
+44. How do you update submodules?
+Use `git submodule update --init --recursive`.
+Example:
+• git submodule update --init --recursive
+
+45. How do you remove a submodule?
+Delete the submodule entry from `.gitmodules`, remove the submodule directory, and run `git rm --cached <submodule-path>`.
+Example:
+• git rm --cached path/to/submodule
+• rm -rf path/to/submodule
+
+46. How do you cherry-pick a commit?
+Use `git cherry-pick <commit-hash>`.
+Example:
+• git cherry-pick abc123
+
+47. How do you squash commits?
+Use interactive rebase: `git rebase -i HEAD~n` and mark commits as squash.
+Example:
+• git rebase -i HEAD~3
+
+48. How do you sign a commit?
+Use `git commit -S -m "message"` (requires GPG setup).
+Example:
+• git commit -S -m "Signed commit"
+
+49. How do you see the reflog?
+Use `git reflog`.
+Example:
+• git reflog
+
+50. How do you recover a lost commit?
+Find the commit in `git reflog` and use `git checkout <commit-hash>`.
+Example:
+• git checkout abc123
+
+51. What is the difference between `git reset` and `git revert`?
+`git reset` moves the branch pointer and can change history; `git revert` creates a new commit that undoes changes without altering history.
+Example:
+• git reset --hard HEAD~1
+• git revert abc123
+
+52. How do you undo changes after staging but before committing?
+Use `git reset HEAD <filename>` to unstage the file.
+Example:
+• git reset HEAD file.txt
+
+53. How do you undo changes after committing but before pushing?
+Use `git reset --soft HEAD~1` to undo the last commit and keep changes staged.
+Example:
+• git reset --soft HEAD~1
+
+54. How do you undo changes after pushing?
+Use `git revert <commit-hash>` to create a new commit that undoes the changes.
+Example:
+• git revert abc123
+
+55. How do you see the difference between your working directory and the last commit?
+Use `git diff HEAD`.
+Example:
+• git diff HEAD
+
+56. How do you see the difference between the staging area and the last commit?
+Use `git diff --cached`.
+Example:
+• git diff --cached
+
+57. How do you see the difference between your working directory and the staging area?
+Use `git diff`.
+Example:
+• git diff
+
+58. How do you create a patch file from changes?
+Use `git diff > patchfile.patch`.
+Example:
+• git diff > patchfile.patch
+
+59. How do you apply a patch file?
+Use `git apply patchfile.patch`.
+Example:
+• git apply patchfile.patch
+
+60. How do you find which branch a commit belongs to?
+Use `git branch --contains <commit-hash>`.
+Example:
+• git branch --contains abc123
+
+61. How do you list all remote branches?
+Use `git branch -r`.
+Example:
+• git branch -r
+
+62. How do you list all local branches?
+Use `git branch`.
+Example:
+• git branch
+
+63. How do you rename a branch?
+Use `git branch -m <old-name> <new-name>`.
+Example:
+• git branch -m old-name new-name
+
+64. How do you set upstream branch for tracking?
+Use `git branch --set-upstream-to=origin/<branch> <branch>`.
+Example:
+• git branch --set-upstream-to=origin/main main
+
+65. How do you see which branch you are currently on?
+Use `git branch` or `git status`.
+Example:
+• git branch
+• git status
+
+66. How do you clean untracked files?
+Use `git clean -f`.
+Example:
+• git clean -f
+
+67. How do you clean untracked directories?
+Use `git clean -fd`.
+Example:
+• git clean -fd
+
+68. How do you clean ignored files?
+Use `git clean -f -X`.
+Example:
+• git clean -f -X
+
+69. How do you clean all untracked and ignored files?
+Use `git clean -fdx`.
+Example:
+• git clean -fdx
+
+70. How do you see the commit graph visually?
+Use `git log --graph --oneline --decorate --all`.
+Example:
+• git log --graph --oneline --decorate --all
+
+71. How do you see the short log of commits?
+Use `git shortlog`.
+Example:
+• git shortlog
+
+72. How do you see the summary of changes in a commit?
+Use `git show <commit-hash>`.
+Example:
+• git show abc123
+
+73. How do you see the author of a commit?
+Use `git show --pretty=format:'%an' <commit-hash>`.
+Example:
+• git show --pretty=format:'%an' abc123
+
+74. How do you see the date of a commit?
+Use `git show --pretty=format:'%ad' <commit-hash>`.
+Example:
+• git show --pretty=format:'%ad' abc123
+
+75. How do you see the commit message?
+Use `git show --pretty=format:'%s' <commit-hash>`.
+Example:
+• git show --pretty=format:'%s' abc123
+
+76. How do you see the files changed in a commit?
+Use `git show --name-only <commit-hash>`.
+Example:
+• git show --name-only abc123
+
+77. How do you see the number of commits in a branch?
+Use `git rev-list --count <branch-name>`.
+Example:
+• git rev-list --count main
+
+78. How do you see the first commit in a repository?
+Use `git rev-list --max-parents=0 HEAD`.
+Example:
+• git rev-list --max-parents=0 HEAD
+
+79. How do you see the last commit in a branch?
+Use `git log -1 <branch-name>`.
+Example:
+• git log -1 main
+
+80. How do you see the parent commits of a merge?
+Use `git log --merges`.
+Example:
+• git log --merges
+
+81. How do you see the commit history for a specific author?
+Use `git log --author="Author Name"`.
+Example:
+• git log --author="John Doe"
+
+82. How do you see the commit history for a specific file?
+Use `git log <filename>`.
+Example:
+• git log file.txt
+
+83. How do you see the commit history with statistics?
+Use `git log --stat`.
+Example:
+• git log --stat
+
+84. How do you see the commit history with patches?
+Use `git log -p`.
+Example:
+• git log -p
+
+85. How do you see the commit history in reverse order?
+Use `git log --reverse`.
+Example:
+• git log --reverse
+
+86. How do you see the commit history for a range of commits?
+Use `git log <start-commit>..<end-commit>`.
+Example:
+• git log abc123..def456
+
+87. How do you see the commit history for a range of dates?
+Use `git log --since="2022-01-01" --until="2022-12-31"`.
+Example:
+• git log --since="2022-01-01" --until="2022-12-31"
+
+88. How do you see the commit history for a range of authors?
+Use `git log --author="Author1|Author2"`.
+Example:
+• git log --author="John|Jane"
+
+89. How do you see the commit history for a range of files?
+Use `git log -- <file1> <file2>`.
+Example:
+• git log -- file1.txt file2.txt
+
+90. How do you see the commit history for a range of branches?
+Use `git log branch1 branch2`.
+Example:
+• git log main dev
+
+91. How do you see the commit history for a range of tags?
+Use `git log tag1 tag2`.
+Example:
+• git log v1.0.0 v2.0.0
+
+92. How do you see the commit history for a range of remotes?
+Use `git log origin/main upstream/main`.
+Example:
+• git log origin/main upstream/main
+
+93. How do you see the commit history for a range of submodules?
+Use `git log <submodule-path>`.
+Example:
+• git log path/to/submodule
+
+94. How do you see the commit history for a range of stashes?
+Use `git log stash@{0} stash@{1}`.
+Example:
+• git log stash@{0} stash@{1}
+
+95. How do you see the commit history for a range of patches?
+Use `git log patch1 patch2`.
+Example:
+• git log patch1 patch2
+
+96. How do you see the commit history for a range of diffs?
+Use `git log diff1 diff2`.
+Example:
+• git log diff1 diff2
+
+97. How do you see the commit history for a range of merges?
+Use `git log --merges`.
+Example:
+• git log --merges
+
+98. How do you see the commit history for a range of rebases?
+Use `git log --rebase`.
+Example:
+• git log --rebase
+
+99. How do you see the commit history for a range of cherry-picks?
+Use `git log --cherry-pick`.
+Example:
+• git log --cherry-pick
+
+100. How do you see the commit history for a range of squashes?
+Use `git log --squash`.
+Example:
+• git log --squash
+
+101. How do you see the commit history for a range of resets?
+Use `git log --reset`.
+Example:
+• git log --reset
