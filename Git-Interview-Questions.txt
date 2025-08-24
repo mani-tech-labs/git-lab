@@ -1,0 +1,47 @@
+Git Interview Questions and Answers
+==================================
+
+1. What is Git?
+Git is a distributed version control system used to track changes in source code during software development.
+
+2. What is the difference between Git and GitHub?
+Git is a version control tool; GitHub is a web-based hosting service for Git repositories.
+
+3. How do you initialize a new Git repository?
+Use `git init` to create a new repository in your project directory.
+
+4. How do you clone a repository?
+Use `git clone <repo-url>` to copy a remote repository to your local machine.
+
+5. What is a commit?
+A commit is a snapshot of your changes in the repository. Use `git commit -m "message"` to create one.
+
+6. How do you check the status of your repository?
+Use `git status` to see staged, unstaged, and untracked files.
+
+7. How do you stage files for commit?
+Use `git add <filename>` to stage a file, or `git add .` to stage all changes.
+
+8. How do you view the commit history?
+Use `git log` to see the commit history.
+
+9. What is a branch in Git?
+A branch is a separate line of development. Use `git branch <branch-name>` to create one.
+
+10. How do you switch branches?
+Use `git checkout <branch-name>` to switch to another branch.
+
+11. How do you merge branches?
+Use `git merge <branch-name>` to merge another branch into your current branch.
+
+12. How do you resolve merge conflicts?
+Edit the conflicted files manually, then stage and commit the resolved files.
+
+13. How do you connect your local repo to a remote?
+Use `git remote add origin <remote-url>`.
+
+14. How do you push changes to a remote repository?
+Use `git push origin <branch-name>`.
+
+15. How do you pull changes from a remote repository?
+Use `git pull origin <branch-name>`.
