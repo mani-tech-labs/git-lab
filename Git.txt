@@ -46,7 +46,11 @@ git log     : To list all previous commits. Option --oneline can be used to list
 
 git branch  : To list all branches. A pointer will show you which branch you currently in.
 
-git branch <branch-name> : To create a new branch
+git branch <branch-name>    : To create a new branch
+
+git checkout <branch-name>  : To switch to mentioned branch
+
+git merge <branch-name>     : To merge the mentioned branch.
 
 
 
