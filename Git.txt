@@ -17,11 +17,9 @@ Ex: git clone https://github.com/mani-tech-labs/shell-scripting-projects.git
 
 git status  : It will be useful to check the status of current working directory like any files are modified, are files need to be added to stage, or yet to be commited etc. It will help you with commands as well.
 
-git log     : It will display all commits done by all users.
+git log     : It will display all commits done by all users, option -p can be used for detailed log, like changes done to file/s
 
-git log --patch or git log -p : For logging more details with respect to commit like changes done in files etc.
-
-git add     : To add modified file to stage area.
+git add     : To add modified file to stage area, same command can used for adding new file.
 
 git add .   : To add all modified files to stage area.
 
@@ -36,6 +34,11 @@ git commit -m "msg"     : This will commit changes to local repo
 git remote -v           : Lists all repository connected with local repo, URL show where the repo is hosted GitHub/Gitlab
 
 git push origin main    : Pushed the local repo changes to origin main, I mean remote repo :) 
+
+git log     : To list all previous commits, option --oneline can be used for to list commits in one line, option --decorate can be used to display commit log with extra information and visiaully annotated.
+
+git branch <branch name>: To create a new branch
+
 
 
 
